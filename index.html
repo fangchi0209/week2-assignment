@@ -72,8 +72,6 @@
         // 找出至少包含兩筆整數的列表 (Python) 或陣列 (JavaScript) 中，兩兩數字相乘後的最大值。
         function maxProduct(nums) {
             // 請用你的程式補完這個函式的區塊
-            // var maxproduct = [5, 20, 2, 6];
-            // var max= maxproduct[0];
             var sum = 0;
             let a = -Infinity;
             for (let n = 0; n < nums.length; n++) {
@@ -113,6 +111,39 @@
         result = twoSum([2, 11, 7, 15], 9)
         console.log(result)  // show [0, 2] because nums[0]+nums[2] is 9
 
+        // 要求五 ( Optional ):演算法
+        // 給定只會包含 0 或 1 兩種數字的列表 (Python) 或陣列 (JavaScript)，計算連續出現 0 的最大長度。
+        
+        function maxZeros(nums){
+        // // 請用你的程式補完這個函式的區塊
+    
+            let sum=0;
+            let t=0;
+            for (let s=0; s<=nums.length; s++){
+                if (nums[s]==0){
+                    sum=sum+1;
+                    t=Math.max(t, sum);
+                    
+                }else{
+                    sum=0;
+                }
+            }
+            console.log(t);
+        }
+
+        maxZeros([0, 1, 0, 0])
+        maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0])
+        maxZeros([1, 1, 1, 1, 1])
+
+
+
+        
+
+        // maxZeros([0, 1, 0, 0])​ // 得到 2
+        // maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0])​ // 得到 4 
+        // maxZeros([1, 1, 1, 1, 1])​ // 得到 0
+
+
     </script>
 </head>
 
@@ -122,3 +153,4 @@
 </body>
 
 </html>
+
